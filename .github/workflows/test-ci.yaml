@@ -5,8 +5,11 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-# Trigger the workflow on pull requests to the main branch
+# Trigger the workflow on push and pull requests to the main branch
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
